@@ -3,15 +3,15 @@ public class Producto {
     
     
     private String nombre;
-    private double precio;
-    private double costoProducto;
+    private int precio;
+    private int costoProducto;
 
-    public Producto(String nombre, double precio) {
+    public Producto(String nombre, int precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
 
-    public Producto(String nombre, double precio, double costoProducto) {
+    public Producto(String nombre, int precio, int costoProducto) {
         this.nombre = nombre;
         this.precio = precio;
         this.costoProducto = costoProducto;
@@ -47,7 +47,7 @@ public class Producto {
         return nombre;
     }
 
-    public double getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
@@ -55,7 +55,7 @@ public class Producto {
         return costoProducto;
     }
 
-    public void setCostoProducto(double costoProducto) {
+    public void setCostoProducto(int costoProducto) {
         this.costoProducto = costoProducto;
     }
 
@@ -65,7 +65,7 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
     

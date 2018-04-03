@@ -13,7 +13,7 @@ public class ContactoTienda {
     public String toString(){
         String info="";
         
-        info="    Horario atencion: "+horario+". Telefono: "+telefono+".\n";
+        info="         Horario atencion: "+horario+". Telefono: "+telefono+".\n";
        
         return info;
     }

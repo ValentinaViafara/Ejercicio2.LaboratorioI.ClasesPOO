@@ -15,8 +15,7 @@ public class VentasXmayor {
 
    
    public double obtenerGanancia(){
-       double costoInvertidoTotalProductos=cantidadProducto*producto.getPrecio();
-       return  costoVenta-costoInvertidoTotalProductos;
+       return costoVenta-(producto.getCostoProducto()*cantidadProducto);
    }
     
     

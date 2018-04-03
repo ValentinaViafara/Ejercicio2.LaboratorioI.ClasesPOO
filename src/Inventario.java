@@ -26,7 +26,7 @@ public class Inventario {
         return proceso;
     }
     
-    public String cambiarPrecioProducto(String nombre, double precio) {
+    public String cambiarPrecioProducto(String nombre, int precio) {
         boolean proceso=false;
         String cambio="";
         if(!productos.isEmpty()){
@@ -78,7 +78,7 @@ public class Inventario {
     }
     
     
-    public String ventaXnombreXmayor(String nombreproducto,int cantidad, int telefono, String ubicacion, double costoVenta){
+    public String ventaXnombreXmayor(String nombreproducto,int cantidad, int telefono, String ubicacion, int costoVenta){
         String proceso="";
         int aux=cantidad;
         int aux1=-1;
@@ -119,11 +119,11 @@ public class Inventario {
     }
     
     
-    public boolean compraProvedor(CompraProvedor compra, double precioProducto){
+    public boolean compraProvedor(CompraProvedor compra, int precioProducto){
         boolean proceso=false;
         
         for(int i=0; i<compra.getCantidad();i++){
-            if(productos.add(new Producto(compra.getCompra().getNombre(),precioProducto, compra.getCompra().getPrecio()/compra.getCantidad()))){
+            if(productos.add(new Producto(compra.getCompra().getNombre(),precioProducto, compra.getCompra().getPrecio()))){
                 proceso=true;
             }
         }
@@ -183,8 +183,8 @@ public class Inventario {
     
     
     
-    public double obtenerGanancias(){
-        double ganancias=0;
+    public int obtenerGanancias(){
+        int ganancias=0;
         if(!registroHistoricoVentas.getVentas().isEmpty()){
        for(int i=0; i<registroHistoricoVentas.getVentas().size();i++){
            ganancias+=registroHistoricoVentas.getVentas().get(i).obtenerGanancia();
@@ -227,8 +227,8 @@ public class Inventario {
         
         if(contactoTienda!=null){
             
-            contacto+="CONTACTO TIENDA\n";
-            contacto+=contactoTienda.toString()+"/n";
+            contacto+="   CONTACTO TIENDA\n";
+            contacto+=contactoTienda.toString();
         }else{
             contacto+="NO HAY INFORMACIÓN DE LA TIENDA REGISTRADA\n";
         }

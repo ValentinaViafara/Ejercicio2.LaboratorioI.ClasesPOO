@@ -10,7 +10,7 @@ public class Venta {
     }
 
     public double obtenerGanancia(){
-        return productoSalida.getCostoProducto()-productoSalida.getPrecio();
+        return productoSalida.getPrecio()-productoSalida.getCostoProducto();
     }
     
     
